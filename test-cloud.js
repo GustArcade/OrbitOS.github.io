@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto'),core=require('./dist/catalogue-core.js');
+const html=fs.readFileSync('dist/index.html','utf8');
+const script=html.match(/<script>\s*const GN_CATALOGUE=[\s\S]*?<\/script>/)[0].replace(/^<script>|<\/script>$/g,'');
+const context={window:{ORBIT_CLOUD_GAMES:[{id:'as0001',name:'Removed cloud game'}],ORBIT_GHOST_CLOUD_GAMES:[{id:'ghost-dg0001',name:'Removed cloud game'}]},URL,OrbitCatalogue:core,location:{href:'https://orbitos.test/'},localStorage:{getItem(){return null},setItem(){}},placeholderCover(){return ''}};
+vm.createContext(context);
+vm.runInContext(fs.readFileSync('dist/achroma-games.js','utf8'),context);
+vm.runInContext(script.slice(0,script.indexOf('const load='))+'\nthis.catalogue=allGames;',context);
+const rows=Array.from(context.catalogue);
+assert.equal(rows.length,2593,'Keep all existing browser and built-in games');
+assert.equal(new Set(rows.map(game=>game.id)).size,rows.length);
+assert.ok(rows.every(game=>!game.cloudOnly&&!game.cloudVariants?.length),'No cloud-only titles or cloud alternatives may remain');
+const mapping=rows.map(game=>[game.id,game.name,game.url,game.image,game.category,game.porter,game.source,game.featured]).sort((a,b)=>a[0].localeCompare(b[0]));
+assert.equal(crypto.createHash('sha256').update(JSON.stringify(mapping)).digest('hex'),'186e80c318c39343ae79d27951c46397f223a55dcb80294408801f5ca5f2ceea','Browser IDs, names, launch URLs, artwork and metadata must match the previous release');
+assert.ok(!/<script\b[^>]*src="(?:cloud|ghostcloud)/.test(html),'Cloud launch integrations must not be loaded');
+assert.ok(!/<option value="(?:Cloud Games|GhostCloud Games)">/.test(html),'Remove cloud collection choices from both layouts');
+for(const name of ['Cuphead','My Friend Pedro','Hollow Knight'])assert.ok(rows.some(game=>game.name===name),'Keep the browser edition of '+name);
+console.log('PASS: all 2593 browser games retain their IDs, URLs, artwork and metadata; cloud titles, launch alternatives and collection choices removed, including with stale cloud globals');

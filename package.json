@@ -1,0 +1,12 @@
+{
+  "name": "orbitos-fusion-galaxy",
+  "version": "9.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_USE_ENV_PROXY=1 ORBIT_BIND_HOST=0.0.0.0 node server.js",
+    "build": "node scripts/build-worker.mjs",
+    "verify": "npm run build && npm test && node scripts/validate-worker.mjs && node scripts/audit-site.mjs",
+    "test": "node test.js && node test-proxy-selector.js && node test-fusion.js && node test-media.js && node test-movie-backup.js && node test-final.js && node test-themes.js && node test-covers.js && node test-layout-dock.js && node test-fullscreen.js && node test-personalization.js && node test-apps.mjs && node test-catalogue.js && node test-cloud.js && node test-cloud-accounts.mjs && node test-ghostcloud.js && node test-cloud-runtime.mjs"
+  }
+}

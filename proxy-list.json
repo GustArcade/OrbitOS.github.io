@@ -1,0 +1,184 @@
+[
+  {
+    "id": "0",
+    "host": "142.93.65.222",
+    "port": 3129,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "1",
+    "host": "138.68.60.8",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "2",
+    "host": "159.203.61.169",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "3",
+    "host": "130.127.204.197",
+    "port": 8080,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "4",
+    "host": "165.154.162.73",
+    "port": 8888,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "5",
+    "host": "139.162.78.109",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "6",
+    "host": "13.239.253.213",
+    "port": 47048,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "7",
+    "host": "134.209.29.120",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "8",
+    "host": "161.35.70.249",
+    "port": 80,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "9",
+    "host": "116.202.108.111",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "10",
+    "host": "103.237.102.191",
+    "port": 11111,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "11",
+    "host": "103.164.55.81",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "12",
+    "host": "176.111.37.216",
+    "port": 39811,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "13",
+    "host": "176.111.37.5",
+    "port": 39811,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "14",
+    "host": "139.59.1.14",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "15",
+    "host": "130.110.103.245",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "16",
+    "host": "159.138.84.187",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "17",
+    "host": "177.234.217.83",
+    "port": 999,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "18",
+    "host": "125.16.33.58",
+    "port": 80,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "19",
+    "host": "139.198.113.42",
+    "port": 10023,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "20",
+    "host": "177.234.217.92",
+    "port": 999,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "21",
+    "host": "149.129.255.179",
+    "port": 6588,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "22",
+    "host": "149.129.226.9",
+    "port": 8000,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "23",
+    "host": "164.52.11.194",
+    "port": 18080,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "24",
+    "host": "140.238.32.108",
+    "port": 3128,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  },
+  {
+    "id": "25",
+    "host": "177.234.217.45",
+    "port": 999,
+    "protocol": "http-connect",
+    "source": "Uploaded TXT"
+  }
+]
